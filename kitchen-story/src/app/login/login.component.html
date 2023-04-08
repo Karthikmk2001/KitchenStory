@@ -1,0 +1,41 @@
+<div class="container">
+  <h3>Login</h3>
+  <form [formGroup]="userForm" (ngSubmit)="login()" novalidate>
+    <div class="mb-3">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          formControlName="username"
+          placeholder="UserName"
+          [(ngModel)]="userObj.username"
+          required
+        />
+        <div *ngIf="submitted && f['username'].errors">
+          <div *ngIf="f['username'].errors['required']">Username Required</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <div class="form-group">
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          formControlName="password"
+          placeholder="Password"
+          [(ngModel)]="userObj.password"
+          required
+        />
+        <div *ngIf="submitted && f['password'].errors">
+          <div *ngIf="f['password'].errors['required']">
+            Password is required
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>

@@ -1,0 +1,53 @@
+<form (ngSubmit)="updateFood()">
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control"
+      name="id"
+      [(ngModel)]="fooditem[this.id].id"
+      placeholder="enter food id"
+      disabled="true"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control"
+      name="name"
+      [(ngModel)]="fooditem[this.id].food_name"
+      placeholder="Enter Food name"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control"
+      name="img"
+      [(ngModel)]="fooditem[this.id].food_img"
+      placeholder="enter image url"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control"
+      name="price"
+      [(ngModel)]="fooditem[this.id].food_price"
+      placeholder="enter price"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control"
+      name="quantity"
+      [(ngModel)]="fooditem[this.id].food_quantity"
+      placeholder="enter quantity"
+    />
+  </div>
+
+  <br />
+  <div class="mb-3">
+    <button type="submit" class="btn btn-success">Submit</button>
+  </div>
+</form>

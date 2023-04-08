@@ -1,0 +1,102 @@
+<div class="container py-1">
+  <h3>User Registration</h3>
+  <form
+    [formGroup]="userForm"
+    (ngSubmit)="onSubmit()"
+    [passwordMatch]="['password', 'confirmpassword']"
+    novalidate
+  >
+    <div class="mb-3">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="fullname"
+          formControlName="fullname"
+          placeholder="FullName"
+          [(ngModel)]="user.fullname"
+          required
+        />
+        <div *ngIf="submitted && f['fullname'].errors">
+          <div *ngIf="f['fullname'].errors['required']">Fullname Required</div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          formControlName="username"
+          placeholder="UserName"
+          [(ngModel)]="user.username"
+          required
+        />
+        <div *ngIf="submitted && f['username'].errors">
+          <div *ngIf="f['username'].errors['required']">Username Required</div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="form-group">
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          formControlName="email"
+          placeholder="Email"
+          [(ngModel)]="user.email"
+          required
+        />
+        <div *ngIf="submitted && f['email'].errors">
+          <div *ngIf="f['email'].errors['required']">Email is required</div>
+
+          <div *ngIf="f['email'].errors['email']">
+            Enter valid Email Address
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <div class="form-group">
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          formControlName="password"
+          placeholder="Password"
+          [(ngModel)]="user.password"
+          required
+        />
+        <div *ngIf="submitted && f['password'].errors">
+          <div *ngIf="f['password'].errors['required']">
+            Password is required
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="form-group">
+        <input
+          type="password"
+          class="form-control"
+          name="confirmpassword"
+          formControlName="confirmpassword"
+          placeholder="ConfirmPassword"
+          required
+        />
+        <div *ngIf="submitted && f['confirmpassword'].errors">
+          <div *ngIf="f['confirmpassword'].errors['required']">
+            Confirm Your Password
+          </div>
+          <div *ngIf="f['confirmpassword'].errors['passwordMatch']">
+            Password Must Match
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+</div>

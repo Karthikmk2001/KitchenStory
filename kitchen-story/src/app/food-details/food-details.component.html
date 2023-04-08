@@ -1,0 +1,42 @@
+<div class="card">
+  <div class="card-header">
+    <h3>
+      Details of <span>{{ fooditem[this.id].food_name }}</span>
+    </h3>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>ID</th>
+          <td>{{ fooditem[this.id].id }}</td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td>{{ fooditem[this.id].food_name }}</td>
+        </tr>
+        <tr>
+          <th>Price</th>
+          <td>{{ fooditem[this.id].food_price }}</td>
+        </tr>
+        <tr>
+          <th>Quantity</th>
+          <td>{{ fooditem[this.id].food_quantity }}</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <a routerLink="/food-list" class="btn btn-secondary">Back</a> |
+            <a
+              [routerLink]="['/food-update', fooditem[this.id]]"
+              class="btn btn-success"
+              >Update</a
+            >
+            |
+            <button class="btn btn-danger" (click)="deleteEmp()">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<h3>{{ title }}</h3>
+
+<br />
+
+<a routerLink="/food-add" class="btn btn-success">Add New Item</a>
+
+<br /><br />
+
+<table class="table table-bordered text-center">
+  <thead>
+    <tr>
+      <!-- <th>S.No.</th> -->
+      <th>Id</th>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let f of fooditems; let i = index">
+      <!-- <td>{{i + 1}}</td> -->
+      <td>{{ f.id }}</td>
+      <td>{{ f.food_name }}</td>
+      <td><img src="{{ f.food_img }}" alt="" width="50px" height="50px" /></td>
+      <td>{{ f.food_price }}</td>
+      <td>{{ f.food_quantity }}</td>
+      <td>
+        <a [routerLink]="['/food-details', f.id]" class="btn btn-secondary">
+          View Details</a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>

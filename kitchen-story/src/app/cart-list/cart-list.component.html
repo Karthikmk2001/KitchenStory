@@ -1,0 +1,45 @@
+<div *ngIf="isCartEmpty()">
+  <h1>Your Cart is empty :(</h1>
+</div>
+
+<div *ngIf="!isCartEmpty()">
+  <h3>Your Cart</h3>
+
+  <table class="table table-bordered text-center">
+    <thead>
+      <tr>
+        <th>Sl no</th>
+        <th>name</th>
+        <th>price</th>
+        <th>quantity</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ item.product }}</td>
+        <td>{{ item.price | currency : "INR" }} / each</td>
+        <td>{{ item.quantity }}</td>
+        <td>
+          <a class="btn btn-outline-secondary" (click)="removeItem(i)"
+            >Remove</a
+          >
+          <!-- <a class="btn btn-success" (click)="increment(i)">+</a>
+                      <a class="btn btn-danger" (click)="decrement(i)">-</a> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="checkout">
+    <h6 style="text-decoration: underline">Cart Details</h6>
+    <b>Total Items : {{ items.length }}</b> |
+    <b
+      >Total Price : <mark>{{ total | currency : "INR" }}</mark></b
+    >
+    <br />
+    <br />
+    <button (click)="checkout()" class="btn btn-primary">CHECKOUT</button>
+  </div>
+</div>

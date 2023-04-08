@@ -1,0 +1,7 @@
+{
+  "/fooditems/list": "/fooditems",
+  "/fooditems/get/:id": "/fooditems/:id",
+  "/fooditems/create": "/fooditems",
+  "/fooditems/update/:id": "/fooditems/:id",
+  "/fooditems/delete/:id": "/fooditems/:id"
+}

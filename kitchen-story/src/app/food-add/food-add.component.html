@@ -1,0 +1,52 @@
+<h3>Add New Item</h3>
+<br />
+<form (ngSubmit)="addFood()">
+  <div class="mb-3">
+    <!-- <label for="name" class="form-label">Name</label> -->
+    <input
+      type="text"
+      class="form-control"
+      name="name"
+      [(ngModel)]="this.fooditem.food_name"
+      placeholder="Enter Name"
+    />
+  </div>
+
+  <div class="mb-3">
+    <!-- <label for="email" class="form-label">Email</label> -->
+    <input
+      type="text"
+      class="form-control"
+      name="image"
+      [(ngModel)]="this.fooditem.food_img"
+      placeholder="Enter Image Url"
+    />
+  </div>
+  <div class="mb-3">
+    <!-- <label for="name" class="form-label">Name</label> -->
+    <input
+      type="text"
+      class="form-control"
+      name="price"
+      [(ngModel)]="this.fooditem.food_price"
+      placeholder="Enter Price"
+    />
+  </div>
+  <div class="mb-3">
+    <!-- <label for="name" class="form-label">Name</label> -->
+    <input
+      type="text"
+      class="form-control"
+      name="quantity"
+      [(ngModel)]="this.fooditem.food_quantity"
+      placeholder="Enter Quantity"
+    />
+  </div>
+
+  <br />
+
+  <div class="mb-3">
+    <button type="submit" class="btn btn-success">Submit</button> |
+    <button type="reset" class="btn btn-danger">Clear</button>
+  </div>
+</form>

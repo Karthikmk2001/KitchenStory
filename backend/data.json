@@ -1,0 +1,71 @@
+{
+  "admin": [
+    {
+      "username": "admin",
+      "password": "1234567890"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "fullname": "kmk",
+      "username": "kmk",
+      "email": "kmk@teksystems.com",
+      "password": "123456"
+    },
+    {
+      "fullname": "dev",
+      "username": "devdas",
+      "email": "kmk@gmail.com",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "fullname": "Shinavi",
+      "username": "shiv",
+      "email": "shiv@gmail.com",
+      "password": "12345678",
+      "id": 3
+    },
+    {
+      "fullname": "ravi",
+      "username": "ravi",
+      "email": "ravi@gmail.com",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "fullname": "dhruva",
+      "username": "dhruva",
+      "email": "d@gmail.com",
+      "password": "123456",
+      "id": 5
+    }
+  ],
+  "fooditems": [
+    {
+      "id": 1,
+      "food_name": "dosa",
+      "food_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8EzHTNHeUpFBgKvbEDj8tLRrOS3uhtSCrlA&usqp=CAU",
+      "food_price": 120,
+      "food_quantity": 5,
+      "food_added": true
+    },
+    {
+      "id": 2,
+      "food_name": "juice",
+      "food_img": "https://media.istockphoto.com/id/155376375/photo/fruit-juice.jpg?s=612x612&w=0&k=20&c=DHpot0a67oN-8lSW0CMI7Y4vLM-TlMBBqA7c5kCfrNo=",
+      "food_price": 150,
+      "food_quantity": 3,
+      "food_added": true
+    },
+    {
+      "id": 3,
+      "food_name": "biriyani",
+      "food_img": "https://b.zmtcdn.com/data/pictures/chains/5/19721465/d9de2792f8b74bda5d9d55ba3201ed9e.jpg",
+      "food_price": 170,
+      "food_quantity": "7",
+      "food_added": true
+    }
+  ]
+}
